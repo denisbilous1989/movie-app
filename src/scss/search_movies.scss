@@ -1,0 +1,48 @@
+.search_movies {
+  background-image: url('https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/6LfVuZBiOOCtqch5Ukspjb9y0EB.jpg');
+  min-height: 200px;
+  height: calc(100vh / 2.5);
+  max-height: 250px;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $white;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.content_column {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.content_wrapp {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.content_title {
+  color: $white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.content_serch {
+  width: 100%;
+}
