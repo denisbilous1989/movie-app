@@ -1,21 +1,20 @@
 <%= header %>
   <div class="search_movies">
-    <div class="content">
-      <div class="content_column">
         <div class="content_wrapp">
           <div class="content_title">
             <h2>Welcome</h2>
             <h3>Millions of movies, series and people. Explore now.</h3>
           </div>
-          <div class="content_serch"></div>
+          <div class="content_serch">
+            <form class="search_form" action="#">
+              <label>
+                <input class="input" type="text" name="name" id="name" placeholder="Enter a movie">
+              </label>
+              <input class="btn" type="submit" value="Search">
+            </form>
+          </div>
         </div>
-      </div>
-    </div>
   </div>
-  <div class="search">
-    <input type="text">
-  </div>
-
   <div class="container">
     <h2 class="popular_movies">Popular Movies</h2>
     <div class="popular"></div>
