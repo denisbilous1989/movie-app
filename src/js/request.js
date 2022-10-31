@@ -10,7 +10,7 @@ fetch(generateUrl(path))
 
   const element = document.querySelector(selector);
 
-    element.innerHTML = renderMovies(data.results);
+  element.innerHTML = renderMovies(data.results);
  
 })
 }
