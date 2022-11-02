@@ -19,11 +19,21 @@
     margin-bottom: 15px;
     position: relative;
     min-height: 350px;
-}
 
-.movie img {
-  border-radius: 10px;
-  width: 100%;
+    a {
+
+      img {
+        border-radius: 10px;
+        width: 100%;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      
+    }
 }
 
 .movie_content {
