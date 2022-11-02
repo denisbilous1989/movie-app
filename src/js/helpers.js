@@ -1,9 +1,16 @@
-import { generateDate, generateImgUrl, generatePopularity } from "./utils";
+import { generateDate, generateImgUrl, generatePopularity, generateTitle } from "./utils";
 
 
-// export const renderMovies = movies => (`
-//       ${movies.map(movie => renderMovieCard(movie)).join('')}
-// `)
+export const renderMovies = (movies, path) => (`
+
+    <div class="container">
+        <h2 class="title">${generateTitle(path) + ' Movies'}</h2>
+        <div class="${path}">
+        ${movies.map(movie => renderMovieCard(movie)).join('')}
+        </div>
+    </div>
+      
+`)
 
 
 export const renderMovieCard = ({ poster_path, original_title, release_date, vote_average}) => (`
