@@ -23,6 +23,7 @@
 
 .movie img {
   border-radius: 10px;
+  width: 100%;
 }
 
 .movie_content {
@@ -37,10 +38,9 @@
 
 .raiting {
   background-color: $dark_blue;
-  ;
   color: $blue;
   position: absolute;
-  top: -35px;
+  top: -40px;
   left: 5%;
   border: 1px solid black;
   border-radius: 50%;

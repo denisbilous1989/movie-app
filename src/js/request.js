@@ -1,16 +1,16 @@
 import { generateUrl } from "./utils.js";
-import { renderMovies } from "./helpers.js";
+import { renderMovieCard } from "./helpers.js";
 
 export const getMovies = (path, selector) => {
 fetch(generateUrl(path))
 .then(res => res.json())
 .then(data => {
 
-  console.log('data', data);
+  console.log('data', data.results);
 
-  const element = document.querySelector(selector);
+  const movies = data.results.map(movie => renderMovieCard(movie)).join('');
 
-  element.innerHTML = renderMovies(data.results);
- 
+  document.querySelector(selector).innerHTML = movies;
 })
 }
+
