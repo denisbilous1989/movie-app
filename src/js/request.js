@@ -49,6 +49,7 @@ export const getFilteredMovies = path => {
     console.log('data', data);
 
     const root = document.querySelector('#root');
+    
 
 
     if(data.success === false) {

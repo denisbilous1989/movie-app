@@ -11,11 +11,7 @@ export const searchMovies = () => {
 
     const searchTemp = search.value;
 
-    location.hash = `#search=${searchTemp}`
-    console.log('location.hash', location.hash);
+    location.hash = `#search=${searchTemp}`;
 
-    if(searchTemp) {
-      getFilteredMovies(generateUrl('search/movie') + '&query=' + searchTemp);
-    }
   })
 }

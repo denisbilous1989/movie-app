@@ -1,8 +1,8 @@
-import { getMovies, getMovieDetails } from "./request.js";
+import { getMovies, getMovieDetails, getFilteredMovies } from "./request.js";
 import { searchMovies } from "./search.js";
+import { generateUrl } from "./utils.js";
 
 searchMovies();
-
 
 checkUrl();
 
@@ -21,6 +21,8 @@ function checkUrl () {
 
   if(hash === '#movieid') {
     getMovieDetails(movieId);
+  }else if(hash === '#search'){
+    getFilteredMovies(generateUrl('search/movie') + '&query=' + movieId)
   } else {
     getMovies('movie/popular');
     getMovies('movie/top_rated');
@@ -28,15 +30,15 @@ function checkUrl () {
   }
 }
 
-// function checkUrl2 () {
-//   const [hash, movieId] = location.hash.split('=');
+function checkUrl2 () {
+  const [hash, _] = location.hash.split('=');
 
-//   if(hash === '#search') {
-//     searchMovies();
-//   } else {
-//     getMovies('movie/popular');
-//     getMovies('movie/top_rated');
-//     getMovies('movie/upcoming');
-//   }
-// }
+  if(hash === '#search') {
+    searchMovies();
+  } else {
+    getMovies('movie/popular');
+    getMovies('movie/top_rated');
+    getMovies('movie/upcoming');
+  }
+}
 
