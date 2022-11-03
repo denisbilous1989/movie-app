@@ -1,5 +1,7 @@
 import { getMovies, getMovieDetails } from "./request.js";
+import { searchMovies } from "./search.js";
 
+searchMovies();
 
 
 checkUrl();
@@ -7,7 +9,11 @@ checkUrl();
 window.addEventListener('hashchange', (e) => {
 
   checkUrl();
+
 });
+
+
+
 
 
 function checkUrl () {
@@ -16,8 +22,21 @@ function checkUrl () {
   if(hash === '#movieid') {
     getMovieDetails(movieId);
   } else {
-    getMovies('popular');
-    getMovies('top_rated');
-    getMovies('upcoming');
+    getMovies('movie/popular');
+    getMovies('movie/top_rated');
+    getMovies('movie/upcoming');
   }
 }
+
+// function checkUrl2 () {
+//   const [hash, movieId] = location.hash.split('=');
+
+//   if(hash === '#search') {
+//     searchMovies();
+//   } else {
+//     getMovies('movie/popular');
+//     getMovies('movie/top_rated');
+//     getMovies('movie/upcoming');
+//   }
+// }
+

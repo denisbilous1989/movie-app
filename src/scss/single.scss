@@ -1,0 +1,38 @@
+.single {
+  width: 100%;
+  margin-top: 20px;
+
+  .single_movie {
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .single_content {
+      border: 3px solid $dark_blue;
+      border-radius: 10px;
+      padding: 10px 20px;
+
+      .release_date {
+        color: $green;
+      }
+
+      .rate {
+        position: relative;
+        display: inline-block;
+        padding: 15px;
+        border: 1px solid $dark_blue;
+        border-radius: 50%;
+        background-color: $dark_blue;
+        font-size: 30px;
+      }
+
+      .rate:after {
+        content: "\0025";
+        font-size: 10px;
+        position: absolute;
+        top: 30%;
+      }
+    }
+  }
+}
